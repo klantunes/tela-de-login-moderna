@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login-page-project</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+  <main class="page">
+
+    <section class="left-panel">
+      <h1>Bem-vindo de volta!</h1>
+      <h2>Acesse sua conta e continue criando
+        experiências incríveis.</h2>
+      <div class="stats">
+        <div>+1000 Usuários</div>
+        <div>+500 Projetos</div>
+        <div>98% Satisfação</div>
+      </div>
+
+
+    </section>
+
+    <div class="login-card">
+
+      <section class="right-panel">
+
+        <div class="login-container">
+
+          <h1>Faça login para acessar sua conta</h1>
+
+          <h2 class="logins-title">Entrar com</h2>
+
+
+          <div class="login-buttons">
+
+            <button class="google-login" type="button">
+
+              <i class="fa-brands fa-google-plus-g"></i>
+
+
+            </button>
+
+            <button class="facebook-login" type="button">
+
+              <i class="fa-brands fa-facebook"></i>
+
+
+            </button>
+
+            <button class="linkedin-login" type="button">
+
+              <i class="fa-brands fa-linkedin"></i>
+
+
+            </button>
+
+          </div>
+          <div class="divider">
+            <span>OU</span>
+          </div>
+
+          <div class="usuario">
+
+            <form action="/login" method="post" class="login-form">
+
+              <label for="username">Usuário:</label>
+
+
+              <div class="input-box">
+
+                <i class="fa-solid fa-user"></i>
+                <input
+                   type="text"
+                   id="username"
+                   name="username"
+                   placeholder="Digite seu usuário"
+                   required>
+                            
+
+              </div>
+              <label for="password">Senha:</label>
+
+
+              <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+
+                <i class="fa-solid fa-eye" id="togglePassword"></i>
+              </div>
+              <div class="remember-me">
+
+                <label for="remember">Lembrar-me</label><input type="checkbox" id="remember">
+              </div>
+
+              <button type="submit" class="login-button">Entrar</button>
+              
+              <div class="links">
+                 <a href="#">Recuperar senha</a>
+                 <a href="#">Criar conta</a>
+                   </div>          
+            </form>
+          </div>
+      </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+body{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(rgb(255, 30, 236), rgb(134, 2, 134), rgb(195, 76, 224));
+  background-image: url("./img/nootbok.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+body::before{
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(15, 15, 15, 0.336);
+
+  z-index: -1;
+}
+body::after{
+  content: "";
+
+  position: fixed;
+
+  width: 500px;
+  height: 500px;
+
+  background: rgba(195, 76, 224, 0.25);
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  top: -100px;
+  left: -100px;
+
+  z-index: -1;
+}
+
+
+.left-panel {
+  flex: 1;
+  padding: 30px 20px;
+
+}
+
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  padding: 20px;
+  max-width: 420px;
+}
+
+.logins-title {
+  margin-top: 10px;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 30px;
+  margin: 15px 0;
+}
+.login-buttons button {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.726);
+}
+.login-buttons .google-login {
+  background-color: #db4437;
+  color: white;
+}
+.login-buttons .facebook-login {
+  background-color: #3b5998;
+  color: white;
+}
+.login-buttons .linkedin-login {
+  background-color: #0077b5;
+  color: white;
+}
+
+.login-buttons button:hover {
+  transform: scale(1.03);
+}
+
+.usuario{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0 0;
+  margin-top: 10px;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-form input{
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+.login-form button{
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(rgb(248, 41, 255),
+        #c34ce0,
+        #7d3cff);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.login-form button:hover {
+  background: linear-gradient(rgb(255, 255, 255),
+        #f58bfff8,
+        #ff97dcf8);
+}
+.login-card{
+ background: rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+ 
+}
+.login-form input:focus{
+    outline: none;
+    border-color: rgb(195, 76, 224);
+}
+hr{
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  margin: 20px 0;
+}
+.input-box{
+    display: flex;
+    align-items: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+
+    padding: 10px;
+
+}
+
+.input-box input{
+    border: none;
+    outline: none;
+
+    flex: 1;
+
+    margin-left: 10px;
+}
+.divider{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #000000;
+}
+
+.divider span{
+    margin: 0 15px;
+}
+
+
+
+@media (max-width: 768px){
+
+    .page{
+        flex-direction: column;
+    }
+
+}
+.login-card{
+    animation: aparecer 0.8s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.login-form input:focus{
+    border-color: #c34ce0;
+
+    box-shadow: 0 0 15px rgba(195,76,224,0.5);
+}
+.remember-me input{
+    cursor: pointer;
+}
+
+.remember-me label{
+    cursor: pointer;
+
+}
+.stats{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+#togglePassword{
+    cursor: pointer;
+}
+.remember-me{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.login-card{
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover{
+    transform: translateY(-5px);
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.links a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.links a:hover{
+    text-decoration: underline;
+    transition: 0.3s;
+}
